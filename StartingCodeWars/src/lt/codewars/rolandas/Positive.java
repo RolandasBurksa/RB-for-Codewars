@@ -4,17 +4,27 @@ package lt.codewars.rolandas;
 //Example [1,-4,7,12] => 1 + 7 + 12 = 20
 //Note: if there is nothing to sum, the sum is default to 0.
 
+import java.util.Arrays;
+
 public class Positive {
 
+        public static int sum(int[] arr) {
+            return Arrays.stream(arr)
+                    .filter(x -> x > 0)
+                    .sum();
+        }
+
+/*
     public static int sum(int[] arr){
-
-         int sum = 0;
-
-        for (int j : arr)
-            if (j > 0) {
-                return sum + j;
+        int result = 0;
+        for (int i : arr) {
+            if (i > 0) {
+                result += i;
             }
-           return sum;
+        }
+        return result;
     }
+*/
 
 }
+
